@@ -1,0 +1,2 @@
+# test_different_initialization
+test different initialization
