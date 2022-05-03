@@ -1,4 +1,4 @@
-# test_different_initialization
+# test_ELG
 python 3.7
 pytorch 1.10.0
 cu11.3
