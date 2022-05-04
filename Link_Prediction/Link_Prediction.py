@@ -29,7 +29,7 @@ original_G = dgl.heterograph({
         ('paper', 'is-about', 'subject') : data['PvsL'].nonzero(),
         ('subject', 'has', 'paper') : data['PvsL'].transpose().nonzero(),
         ('paper','publish-on','conference') : data['PvsC'].nonzero(),
-        ('conference','publish','paper') : data['PvsC'].transpose().nonzero(),
+        # ('conference','publish','paper') : data['PvsC'].transpose().nonzero(),
     })
 
 # Split
@@ -51,7 +51,7 @@ G = dgl.heterograph({
         ('paper', 'is-about', 'subject') : data['PvsL'].nonzero(),
         ('subject', 'has', 'paper') : data['PvsL'].transpose().nonzero(),
         ('paper','publish-on','conference') : (paper_conf_src_processed, paper_conf_dst_processed),
-        ('conference','publish','paper') : data['PvsC'].transpose().nonzero(),
+        # ('conference','publish','paper') : data['PvsC'].transpose().nonzero(),
     })
 
 G = G.to(device)
