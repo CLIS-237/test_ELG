@@ -6,6 +6,8 @@ Number of Author Nodes 	: 1134649
 Number of Field Nodes 	: 59965
 
 Number of `` author affiliated-with institution '' 	:  1043998
-Number of `` author writes paper '' 		:  7145660
-Number of `` paper cites paper ''        		:  5416271
+Number of `` author writes paper '' 		            :  7145660
+Number of `` paper cites paper ''        		        :  5416271
 Number of `` paper has-topic field '' 	          	:  7505078 
+
+PROCESSED_MAG_DATASET:            
