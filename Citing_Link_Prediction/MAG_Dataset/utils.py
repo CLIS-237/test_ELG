@@ -99,14 +99,12 @@ def get_row_idx(data):
 def get_zero_xy(row_idx, adj):
     x = []
     y = []
-    
     for i in row_idx:
         x.append(i)
-        y_tmp = []
-        for j in range(0, adj.shape[1]):
-            if(adj[i][j] == 0):
-                y_tmp.append(j)
-        y.append(random.choices(y_tmp)[0])
+        j = random.randint(0,adj.shape[1]-1)
+        while adj[i][j] != 0:
+            j = random.randint(0,adj.shape[1]-1)
+        y.append(j)
     ret = (np.array(x), np.array(y))
     return ret
 
@@ -122,3 +120,11 @@ def evaluate_acc(pred, label):
         else:
             res.append(0)
     return accuracy_score(y_pred=res, y_true=label)
+
+def search_first_catch(tmp_val_acc, eval_acc_list):
+    ret = -1
+    for i in range(0, len(eval_acc_list)):
+        if eval_acc_list[i] >= tmp_val_acc:
+            ret = i
+            break
+    return ret
